@@ -1,0 +1,20 @@
+/*Author="Tariq"*/
+
+.btn-primary {
+    color: #fff;
+    background-color: blue;
+}
+
+.btn-secondary {
+
+}
+
+a.btn-primary {
+    color: #fff !important;
+    background-color: blue !important;
+}
+
+a.btn-secondary {
+
+}
+
