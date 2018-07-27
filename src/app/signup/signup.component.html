@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col" style="background: #e6e6e6">
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input ngModel #email="ngModel" name="email" type="email" class="form-control" id="email" placeholder="name@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+        <small *ngIf="!email.valid && email.touched" id="emailHelp" class="form-text text-danger">Please enter a valid email address</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input ngModel #password="ngModel" name="password" type="password" class="form-control" id="password" placeholder="Password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+        <small *ngIf="!password.valid && password.touched" id="mobileHelp" class="form-text text-danger">Password must be of min 8 characters with a mixture of Upper, Lower case and special char</small>
+      </div>
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input ngModel #fullName="ngModel" name="fullName" type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+        <small *ngIf="!fullName.valid && fullName.touched" id="nameHelp" class="form-text text-danger">Please enter your name</small>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input ngModel #mobile="ngModel" name="mobile" type="text" class="form-control" id="mobile" placeholder="Mobile" pattern="[0-9.]*" minlength="10" required>
+        <small *ngIf="!mobile.valid && mobile.touched" id="mobileHelp" class="form-text text-danger">Please enter 10 digit mobile number</small>
+      </div>
+      <div class="form-group form-check">
+        <input ngModel name="agreed" type="checkbox" class="form-check-input" id="agreed" required>
+        <label class="form-check-label" for="agreed">I Agree</label>
+      </div>
+      <p>{{ signupForm.value | json }}</p>
+      <button type="submit" class="btn btn-danger" [disabled]=!signupForm.valid >Register Me</button>
+    </form>
+  </div>
+</div>

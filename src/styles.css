@@ -1,12 +1,16 @@
 /*Author="Tariq"*/
 
+body {
+    background: #f1f1f1;
+}
+
 .btn-primary {
     color: #fff;
     background-color: blue;
 }
 
 .btn-secondary {
-
+    color: #fff;
 }
 
 a.btn-primary {
@@ -15,6 +19,6 @@ a.btn-primary {
 }
 
 a.btn-secondary {
-
+    color: #fff;
 }
 

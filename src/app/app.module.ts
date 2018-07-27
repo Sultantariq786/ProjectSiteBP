@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { HelpComponent } from './help/help.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     HeaderComponent,
     HomeComponent,
     PagenotfoundComponent,
+    HelpComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
